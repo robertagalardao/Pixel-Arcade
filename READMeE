@@ -1,0 +1,49 @@
+# PIXEL ARCADE — Máquina de Venda
+
+## Sobre o projeto
+
+O PIXEL ARCADE é uma máquina de venda de fichas para arcade, desenvolvida
+como parte do Trabalho 01 da disciplina de Teoria da Computação.
+
+A máquina aceita moedas de 5, 10 e 25 centavos e libera uma ficha quando
+o valor inserido atinge ou ultrapassa 30 centavos.
+
+O funcionamento da máquina foi inicialmente modelado utilizando um
+Autômato Finito Determinístico (AFD) no JFLAP e posteriormente
+implementado em uma interface web interativa.
+
+---
+
+## Funcionamento da máquina
+
+O preço de uma ficha é **30 centavos**.
+
+A máquina aceita as seguintes moedas:
+
+- 5 centavos
+- 10 centavos
+- 25 centavos
+
+Os estados representam o valor acumulado durante a inserção das moedas:
+
+| Estado | Valor acumulado |
+|--------|-----------------|
+| 0      | 0¢              |
+| 5      | 5¢              |
+| 10     | 10¢             |
+| 15     | 15¢             |
+| 20     | 20¢             |
+| 25     | 25¢             |
+| 30     | 30¢ ou mais     |
+
+O estado inicial é **0** e o estado final é **30**.
+
+Quando o valor inserido chega a 30 centavos ou ultrapassa esse valor,
+uma ficha é liberada.
+
+### Exemplo
+
+Uma sequência de moedas `5 + 10 + 10 + 5` resulta em:
+
+```text
+0 → 5 → 15 → 25 → 30
