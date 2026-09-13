@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PIXEL ARCADE — Máquina de Fichas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="cabinet">
+    <header class="header">
+      <h1>PIXEL ARCADE</h1>
+      <p>INSERT COINS TO PLAY</p>
+    </header>
+
+    <main>
+      <section class="screen" aria-live="polite">
+        <div class="screen-inner">
+          <div class="screen-row">
+            <span>FICHA:</span>
+            <strong>30¢</strong>
+          </div>
+
+          <div class="screen-row">
+            <span>CRÉDITO:</span>
+            <strong id="credit-value">0¢</strong>
+          </div>
+
+          <div class="screen-row">
+            <span>FICHAS LIBERADAS:</span>
+            <strong id="tokens-value">0</strong>
+          </div>
+
+          <div class="screen-row">
+            <span>SALDO:</span>
+            <strong id="balance-value">0¢</strong>
+          </div>
+
+          <p class="screen-message" id="status-message">INSIRA UMA MOEDA</p>
+
+          <div class="token-released" id="token-released" hidden>
+            ★ FICHA LIBERADA! ★
+          </div>
+        </div>
+      </section>
+
+      <section class="coin-slot">
+        <h2>INSERT COIN</h2>
+        <div class="coin-buttons">
+          <button class="coin-btn coin-5" data-value="5" aria-label="Inserir 5 centavos">
+            <span>🪙</span>5¢
+          </button>
+          <button class="coin-btn coin-10" data-value="10" aria-label="Inserir 10 centavos">
+            <span>🪙</span>10¢
+          </button>
+          <button class="coin-btn coin-25" data-value="25" aria-label="Inserir 25 centavos">
+            <span>🪙</span>25¢
+          </button>
+        </div>
+      </section>
+
+      <button class="finish-btn" id="finish-btn">FINALIZAR COMPRA</button>
+
+      <button class="afd-toggle" id="afd-toggle" type="button">⚙ VER FUNCIONAMENTO DO AFD</button>
+
+      <section class="afd-panel" id="afd-panel" hidden>
+        <h2>FUNCIONAMENTO DO AFD</h2>
+        <div class="afd-info">
+          <p>Estado atual: <strong id="state-value">0</strong></p>
+          <p>Última entrada: <strong id="input-value">—</strong></p>
+          <p>Transição: <strong id="transition-value">—</strong></p>
+          <p>Sequência: <strong id="sequence-value">—</strong></p>
+        </div>
+        <p class="afd-states">Estados: 0 → 5 → 10 → 15 → 20 → 25 → 30</p>
+        <p class="afd-final">Estado final: <strong>30 ✓</strong></p>
+      </section>
+    </main>
+
+    <p class="no-change">⚠️ A máquina não devolve troco. O saldo permanece para a próxima compra.</p>
+
+    <footer>
+      AFD modelado no JFLAP · Máquina de fichas
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
