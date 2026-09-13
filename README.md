@@ -52,7 +52,7 @@ como saldo para a próxima compra. A máquina não devolve troco.
 
 O autômato foi desenvolvido e testado utilizando o **JFLAP**.
 
-<img src="imagem-afd.png" alt="AFD da máquina" width="600">
+<img src="imagem-afd.jpg" alt="AFD da máquina" width="600">
 
 O arquivo do autômato utilizado no JFLAP está disponível neste
 repositório como `jflapfinal.jff`.
