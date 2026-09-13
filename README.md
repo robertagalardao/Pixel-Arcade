@@ -86,7 +86,7 @@ transição realizada.
 
 O projeto pode ser testado através do GitHub Pages:
 
-**[Acessar o PIXEL ARCADE](LINK)**
+**[Acessar o PIXEL ARCADE](https://robertagalardao.github.io/Pixel-Arcade/)**
 
 ## Autores
 
